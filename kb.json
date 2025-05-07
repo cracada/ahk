@@ -1,0 +1,303 @@
+[
+  [
+    {
+      "h": 0.75
+    },
+    "Esc",
+    {
+      "h": 0.75
+    },
+    "F1",
+    {
+      "h": 0.75
+    },
+    "F2",
+    {
+      "h": 0.75
+    },
+    "F3",
+    {
+      "h": 0.75
+    },
+    "F4",
+    {
+      "a": 5,
+      "h": 0.75
+    },
+    "-",
+    {
+      "h": 0.75
+    },
+    "-",
+    {
+      "a": 4,
+      "h": 0.75
+    },
+    "F9",
+    {
+      "h": 0.75
+    },
+    "F10",
+    {
+      "h": 0.75
+    },
+    "F11",
+    {
+      "h": 0.75
+    },
+    "F12",
+    {
+      "h": 0.75
+    },
+    "Home",
+    {
+      "h": 0.75
+    },
+    "End",
+    {
+      "h": 0.75
+    },
+    "Ins",
+    {
+      "w": 1.25,
+      "h": 0.75
+    },
+    "Delete"
+  ],
+  [
+    "~",
+    {
+      "c": "#9fb7b7"
+    },
+    "1\n\n\n\n\n\n\n\n\n\n!",
+    "2\n\n\n\n\n\n\n\n\n\n@",
+    "3\n\n\n\n\n\n\n\n\n\n#",
+    "4\n\n\n\n\n\n\n\n\n\n$",
+    "5\n\n\n\n\n\n\n\n\n\n%",
+    "6\n\n\n\n\n\n\n\n\n\n^",
+    "7\n\n\n\n\n\n\n\n\n\n&",
+    "8\n\n\n\n\n\n\n\n\n\n*",
+    "9\n\n\n\n\n\n\n\n\n\n(",
+    "0\n\n\n\n\n\n\n\n\n\n)",
+    "-\n\n\n\n\n\n\n\n\n\n_",
+    "=\n\n\n\n\n\n\n\n\n\n+",
+    {
+      "c": "#5cd1c0",
+      "w": 2.25
+    },
+    "Backspace\n\n\n\n\n\n\n\n\n\n删除整行"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "w": 1.5
+    },
+    "Tab",
+    {
+      "c": "#ccff66"
+    },
+    "Q\n\n\n\n\n\n\n\n\n\n关窗",
+    "W\n\n\n\n\n\n\n\n\n\n关标签",
+    {
+      "c": "#ffadd5"
+    },
+    "E\n\n\n\n\n\n\n\n\n\n#^!E",
+    "R\n\n\n\n\n\n\n\n\n\n!R",
+    {
+      "c": "#ccff66"
+    },
+    "T\n\n\n\n\n\n\n\n\n\n^T",
+    {
+      "c": "#85edff"
+    },
+    "Y\n\n\n\n\n\n\n\n\n\n恢复",
+    {
+      "c": "#aa96da"
+    },
+    "U\n\n\n\n\n\n\n\n\n\nHome",
+    "I\n\n\n\n\n\n\n\n\n\n上",
+    "O\n\n\n\n\n\n\n\n\n\nEnd",
+    {
+      "c": "#ccff66"
+    },
+    "P\n\n\n\n\n\n\n\n\n\n置顶",
+    {
+      "c": "#85c9c9"
+    },
+    "[\n\n\n()\n\n\n\n\n\n(",
+    "]\n\n\n{}\n\n\n\n\n\n)",
+    {
+      "c": "#5cd1c0",
+      "w": 1.75
+    },
+    "\\\n\n\n\n\n\n\n\n\n\n向上新开一行"
+  ],
+  [
+    {
+      "c": "#0f0f0f",
+      "t": "#fafafa",
+      "w": 1.75
+    },
+    "CaspsLock",
+    {
+      "c": "#85edff",
+      "t": "#000000"
+    },
+    "A\n\n\n\n\n\n\n\n\n\n全选",
+    {
+      "c": "#add8e6"
+    },
+    "S\n\n\n\n\n\n\n\n\n\n保存",
+    {
+      "c": "#ccff66"
+    },
+    "D\n\n\n\n\n\n\n\n\n\n!D",
+    {
+      "c": "#add8e6"
+    },
+    "F\n\n\n\n\n\n\n\n\n\n查找",
+    {
+      "c": "#ffadd5"
+    },
+    "G\n\n\n\n\n\n\n\n\n\n#!G",
+    {
+      "c": "#add8e6"
+    },
+    "H\n\n\n\n\n\n\n\n\n\n替换",
+    {
+      "c": "#aa96da"
+    },
+    "J\n\n\n\n\n\n\n\n\n\n左",
+    "K\n\n\n\n\n\n\n\n\n\n下",
+    "L\n\n\n\n\n\n\n\n\n\n右",
+    {
+      "c": "#85c9c9"
+    },
+    ";\n\n\n-\n\n\n\n\n\n=",
+    "'\n\n\n\"\"\n\n\n\n\n\n''",
+    {
+      "c": "#5cd1c0",
+      "w": 2.5
+    },
+    "Enter\n\n\n\n\n\n\n\n\n\n向下新开一行"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "w": 2
+    },
+    "Shift",
+    {
+      "c": "#85edff"
+    },
+    "Z\n\n\n\n\n\n\n\n\n\n撤销",
+    "X\n\n\n\n\n\n\n\n\n\n剪切",
+    "C\n\n\n\n\n\n\n\n\n\n复制",
+    "V\n\n\n\n\n\n\n\n\n\n粘贴",
+    {
+      "c": "#ffdf80"
+    },
+    "B\n\n\n\n\n\n\n\n\n\n删到头",
+    {
+      "fa": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "N\n\n\n\n\n\n前\n\n\n\n删一词",
+    {
+      "f": 3
+    },
+    "M\n\n\n\n\n\n\n\n\n\n退格",
+    {
+      "f": 3
+    },
+    ",\n\n\n\n\n\n\n\n\n\n删除",
+    {
+      "f2": 0
+    },
+    ".\n\n\n\n\n\n\n后\n\n\n删一词",
+    "/\n\n\n\n\n\n\n\n\n\n删到尾",
+    {
+      "c": "#bbbbbb",
+      "w": 3.25
+    },
+    "Shift\n\n\n\n\n\n\n\n\n\nEsc"
+  ],
+  [
+    {
+      "c": "#cccccc"
+    },
+    "Fn",
+    {
+      "w": 1.25
+    },
+    "Ctrl",
+    "Win",
+    "Alt",
+    {
+      "c": "#bbbbbb",
+      "w": 4.75
+    },
+    "Space\n\n\n\n\n\n\n\n\n\n回车",
+    {
+      "c": "#cccccc"
+    },
+    "Alt",
+    {
+      "c": "#ffadd5"
+    },
+    "PrtSc",
+    {
+      "c": "#cccccc"
+    },
+    "Ctrl",
+    {
+      "c": "#ffffd2",
+      "t": "#000000\n\n\n\n\n\n\n\n\n\n#0000ff",
+      "fa": [
+        2
+      ],
+      "h": 0.75
+    },
+    "Pgup\n\n\n\n\n\n\n\n\n\n左键",
+    {
+      "h": 0.75
+    },
+    "↑\n\n\n\n\n\n\n\n\n\n上移",
+    {
+      "fa": [
+        2
+      ],
+      "w": 1.25,
+      "h": 0.75
+    },
+    "PgDn\n\n\n\n\n\n\n\n\n\n右键"
+  ],
+  [
+    {
+      "y": -0.25,
+      "x": 12,
+      "h": 0.75
+    },
+    "←\n\n\n\n\n\n\n\n\n\n左移",
+    {
+      "h": 0.75
+    },
+    "↓\n\n\n\n\n\n\n\n\n\n下移",
+    {
+      "w": 1.25,
+      "h": 0.75
+    },
+    "→\n\n\n\n\n\n\n\n\n\n右移"
+  ]
+]
