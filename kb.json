@@ -30,7 +30,6 @@
     {
       "c": "#cccccc",
       "t": "#000000",
-      "sm": "",
       "a": 5,
       "h": 0.75
     },
@@ -85,7 +84,13 @@
     "6\n\n\n\n\n\n\n\n\n\n^",
     "7\n\n\n\n\n\n\n\n\n\n&",
     "8\n\n\n\n\n\n\n\n\n\n*",
-    "9\n\n\n\n\n\n\n\n\n\n(",
+    {
+      "t": "#000000\n\n#da969e"
+    },
+    "9\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n(",
+    {
+      "t": "#000000"
+    },
     "0\n\n\n\n\n\n\n\n\n\n)",
     "-\n\n\n\n\n\n\n\n\n\n_",
     "=\n\n\n\n\n\n\n\n\n\n+",
@@ -120,22 +125,26 @@
     },
     "Y\n\n\n\n\n\n\n\n\n\n恢复",
     {
-      "c": "#aa96da"
+      "c": "#aa96da",
+      "t": "#000000\n\n#da969e"
     },
-    "U\n\n\n\n\n\n\n\n\n\nHome",
-    "I\n\n\n\n\n\n\n\n\n\n上",
-    "O\n\n\n\n\n\n\n\n\n\nEnd",
+    "U\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nHome",
+    "I\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n上",
+    "O\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nEnd",
     {
-      "c": "#ccff66"
+      "c": "#ccff66",
+      "t": "#000000"
     },
     "P\n\n\n\n\n\n\n\n\n\n置顶",
     {
-      "c": "#85c9c9"
+      "c": "#aa96da",
+      "t": "#000000\n\n#da969e"
     },
-    "[\n\n\n()\n\n\n\n\n\n(",
-    "]\n\n\n{}\n\n\n\n\n\n)",
+    "[\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nPgUp",
+    "]\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nPgDn",
     {
       "c": "#5cd1c0",
+      "t": "#000000",
       "w": 1.75
     },
     "\\\n\n\n\n\n\n\n\n\n\n向上新开一行"
@@ -173,18 +182,25 @@
     },
     "H\n\n\n\n\n\n\n\n\n\n替换",
     {
-      "c": "#aa96da"
+      "c": "#aa96da",
+      "t": "#000000\n\n#da969e"
     },
-    "J\n\n\n\n\n\n\n\n\n\n左",
-    "K\n\n\n\n\n\n\n\n\n\n下",
-    "L\n\n\n\n\n\n\n\n\n\n右",
+    "J\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n左",
+    "K\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n下",
+    "L\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n右",
     {
-      "c": "#85c9c9"
+      "c": "#add8e6",
+      "t": "#000000"
     },
-    ";\n\n\n-\n\n\n\n\n\n=",
-    "'\n\n\n\"\"\n\n\n\n\n\n''",
+    ";\n\n\n\n\n\n\n\n\n\nEsc",
+    {
+      "c": "#85c9c9",
+      "t": "#000000\n\n#da969e"
+    },
+    "'\n\n<i class='fa fa-circle'></i>\n\"\"\n\n\n\n\n\n''",
     {
       "c": "#5cd1c0",
+      "t": "#000000",
       "w": 2.5
     },
     "\n\nEnter\n\n\n\n\n\n\n\n向下新开一行"
@@ -208,17 +224,7 @@
     "B\n\n\n\n\n\n\n\n\n\n删到头",
     {
       "fa": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
+        2
       ]
     },
     "N\n\n\n\n\n\n前\n\n\n\n删一词",
@@ -231,9 +237,12 @@
     },
     ",\n\n\n\n\n\n\n\n\n\n删除",
     {
-      "f2": 0
+      "f": 3
     },
     ".\n\n\n\n\n\n\n后\n\n\n删一词",
+    {
+      "f": 3
+    },
     "/\n\n\n\n\n\n\n\n\n\n删到尾",
     {
       "c": "#cccccc",
@@ -242,36 +251,47 @@
     "\n\nShift"
   ],
   [
+    {
+      "f": 3
+    },
     "Fn",
     {
+      "f": 3,
       "w": 1.25
     },
     "Ctrl",
+    {
+      "f": 3
+    },
     "Win",
+    {
+      "f": 3
+    },
     "Alt",
     {
       "c": "#bbbbbb",
+      "f": 3,
       "w": 4.75
     },
     "Space\n\n\n\n\n\n\n\n\n\n回车",
     {
-      "c": "#cccccc"
+      "c": "#cccccc",
+      "f": 3
     },
     "Alt",
     {
-      "c": "#ffadd5"
+      "c": "#ffadd5",
+      "f": 3
     },
     "PrtSc",
     {
-      "c": "#cccccc"
+      "c": "#cccccc",
+      "f": 3
     },
     "Ctrl",
     {
       "c": "#ffffd2",
       "t": "#000000\n\n\n\n\n\n\n\n\n\n#0000ff",
-      "fa": [
-        2
-      ],
       "h": 0.75
     },
     "Pgup\n\n\n\n\n\n\n\n\n\n左键",
@@ -280,9 +300,6 @@
     },
     "↑\n\n\n\n\n\n\n\n\n\n上移",
     {
-      "fa": [
-        2
-      ],
       "w": 1.25,
       "h": 0.75
     },

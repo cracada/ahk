@@ -9,7 +9,8 @@
 ;CaspLock + erg              | Programs                 
 ;CapsLock + zxcvay sfh \ Cr  | Editor                       
 ;CapsLock + bnm,.Backspace   | Delte Action 
-;CapsLock + [];'             | Key Mapping                      
+;CapsLock + []'              | Key Mapping                      
+;CapsLock + ;                | Esc                      
 ;CapsLock + Direction        | Mouse Move                              
 ;CapsLock + PgUp/PgDn        | Mouse Click                         
 ;CaspLock + 1234567890-=     | Shifter as Shift                   
@@ -63,12 +64,23 @@ CapsLock & 5::SendInput +5
 CapsLock & 6::SendInput +6
 CapsLock & 7::SendInput +7
 CapsLock & 8::SendInput +8
-CapsLock & 9::SendInput +9
-CapsLock & 0::SendInput +0
+;CapsLock & 9::SendInput +9
+CapsLock & 9::
+    if GetKeyState("Alt", "P")
+        SendInput () 
+    else
+        SendInput +9
+return
+;CapsLock & 0::SendInput +0
+CapsLock & 0::
+    if GetKeyState("Alt", "P")
+        SendInput () 
+    else
+        SendInput +0
+return
+
 CapsLock & -::SendInput +{-}
 CapsLock & =::SendInput +{=} 
-;CapsLock & -::Func_nav("PgUp")
-;CapsLock & =::Func_nav("PgDn") 
 
 ;--------------------------------------------------------------------
 CapsLock & q:: SendInput !{F4} 
@@ -84,16 +96,18 @@ CapsLock & p::Func_winPin()
 ;CapsLock & [::SendInput ( 
 CapsLock & [::
     if GetKeyState("Alt", "P")
-        SendInput () 
+        SendInput [] 
     else
-        SendInput (
+        ;SendInput (
+	Func_nav("PgUp")
 return
 ;CapsLock & ]::SendInput ) 
 CapsLock & ]::
     if GetKeyState("Alt", "P")
         SendInput {{}{}}
     else
-        SendInput )
+        ;SendInput )
+	Func_nav("PgDn")
 return
 
 ;--------------------------------------------------------------------
