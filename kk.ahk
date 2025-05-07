@@ -96,14 +96,14 @@ CapsLock & p::Func_winPin()
 ;CapsLock & [::SendInput ( 
 CapsLock & [::
     if GetKeyState("Alt", "P")
-        Func_nav("PgUp")
+        SendInput {PgUp}
     else
         SendInput [] 
 return
 ;CapsLock & ]::SendInput ) 
 CapsLock & ]::
     if GetKeyState("Alt", "P")
-        Func_nav("PgDn")
+        SendInput {PgDn}
     else
         SendInput {{}{}}
 return
