@@ -138,10 +138,16 @@
     "P\n\n\n\n\n\n\n\n\n\n置顶",
     {
       "c": "#aa96da",
-      "t": "#000000\n\n#da969e"
+      "t": "#000000\n\n#da969e",
+      "fa": [
+        0,
+        0,
+        0,
+        1
+      ]
     },
-    "[\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nPgUp",
-    "]\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nPgDn",
+    "[\n\n<i class='fa fa-circle'></i>\nPgUp\n\n\n\n\n\n[]",
+    "]\n\n<i class='fa fa-circle'></i>\nPgdn\n\n\n\n\n\n{}",
     {
       "c": "#5cd1c0",
       "t": "#000000",
@@ -195,7 +201,8 @@
     ";\n\n\n\n\n\n\n\n\n\nEsc",
     {
       "c": "#85c9c9",
-      "t": "#000000\n\n#da969e"
+      "t": "#000000\n\n#da969e",
+      "f": 3
     },
     "'\n\n<i class='fa fa-circle'></i>\n\"\"\n\n\n\n\n\n''",
     {
