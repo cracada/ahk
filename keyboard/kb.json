@@ -1,66 +1,91 @@
 [
   [
     {
+      "c": "#adb5bd",
+      "fa": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "h": 0.75
     },
-    "Esc",
+    "Esc\n\n\n\n\n\n\n\n\n\n暂停",
     {
+      "c": "#cccccc",
+      "f": 3,
       "h": 0.75
     },
     "F1",
     {
+      "f": 3,
       "h": 0.75
     },
     "F2",
     {
+      "f": 3,
       "h": 0.75
     },
     "F3",
     {
+      "f": 3,
       "h": 0.75
     },
     "F4",
     {
-      "c": "#555555",
-      "t": "#ffffff",
+      "c": "#adb5bd",
       "sm": "alps",
       "h": 0.75
     },
-    "F5\n\n\n\n\n\n\n\n-",
+    "F5\n\n\n\n\n\n\n\n\n\n重载",
     {
       "c": "#cccccc",
-      "t": "#000000",
       "a": 5,
+      "f": 3,
       "h": 0.75
     },
     "-",
     {
       "a": 4,
+      "f": 3,
       "h": 0.75
     },
     "F9",
     {
+      "f": 3,
       "h": 0.75
     },
     "F10",
     {
+      "f": 3,
       "h": 0.75
     },
     "F11",
     {
+      "f": 3,
       "h": 0.75
     },
     "F12",
     {
       "a": 5,
+      "f": 3,
       "h": 0.75
     },
     "Home",
     {
+      "f": 3,
       "h": 0.75
     },
     "End",
     {
+      "f": 3,
       "h": 0.75
     },
     "Insert",
@@ -72,30 +97,63 @@
     "\n\nDelete"
   ],
   [
-    "~",
     {
-      "c": "#9fb7b7"
+      "c": "#ded7d7",
+      "f": 3
+    },
+    "~\n\n\n\n\n\n\n\n\n\n~",
+    {
+      "f": 3
     },
     "1\n\n\n\n\n\n\n\n\n\n!",
+    {
+      "f": 3
+    },
     "2\n\n\n\n\n\n\n\n\n\n@",
+    {
+      "f": 3
+    },
     "3\n\n\n\n\n\n\n\n\n\n#",
+    {
+      "f": 3
+    },
     "4\n\n\n\n\n\n\n\n\n\n$",
+    {
+      "f": 3
+    },
     "5\n\n\n\n\n\n\n\n\n\n%",
+    {
+      "f": 3
+    },
     "6\n\n\n\n\n\n\n\n\n\n^",
+    {
+      "f": 3
+    },
     "7\n\n\n\n\n\n\n\n\n\n&",
+    {
+      "f": 3
+    },
     "8\n\n\n\n\n\n\n\n\n\n*",
     {
-      "t": "#000000\n\n#da969e"
+      "t": "#000000\n\n#da969e",
+      "f": 3
     },
     "9\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n(",
     {
-      "t": "#000000"
+      "f": 3
     },
-    "0\n\n\n\n\n\n\n\n\n\n)",
+    "0\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n)",
+    {
+      "t": "#000000",
+      "f": 3
+    },
     "-\n\n\n\n\n\n\n\n\n\n_",
+    {
+      "f": 3
+    },
     "=\n\n\n\n\n\n\n\n\n\n+",
     {
-      "c": "#5cd1c0",
+      "c": "#b6f7a8",
       "w": 2.25
     },
     "\n\nBackspace\n\n\n\n\n\n\n\n删除整行"
@@ -103,111 +161,155 @@
   [
     {
       "c": "#cccccc",
+      "f": 3,
       "w": 1.5
     },
     "Tab",
     {
-      "c": "#ccff66"
+      "c": "#90c2f0",
+      "f": 3
     },
     "Q\n\n\n\n\n\n\n\n\n\n关窗",
+    {
+      "f": 3
+    },
     "W\n\n\n\n\n\n\n\n\n\n关标签",
     {
-      "c": "#ffadd5"
+      "c": "#808080",
+      "t": "#ffffff",
+      "f": 3
     },
     "E\n\n\n\n\n\n\n\n\n\n#^!E",
+    {
+      "f": 3
+    },
     "R\n\n\n\n\n\n\n\n\n\n!R",
     {
-      "c": "#ccff66"
+      "c": "#90c2f0",
+      "t": "#000000",
+      "f": 3
     },
     "T\n\n\n\n\n\n\n\n\n\n^T",
     {
-      "c": "#85edff"
+      "c": "#9ef08b",
+      "f": 3
     },
     "Y\n\n\n\n\n\n\n\n\n\n恢复",
     {
-      "c": "#aa96da",
-      "t": "#000000\n\n#da969e"
+      "c": "#fce992",
+      "t": "#000000\n\n#da969e",
+      "f": 3
     },
     "U\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nHome",
+    {
+      "f": 3
+    },
     "I\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n上",
+    {
+      "f": 3
+    },
     "O\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\nEnd",
     {
-      "c": "#ccff66",
-      "t": "#000000"
+      "c": "#90c2f0",
+      "t": "#000000",
+      "f": 3
     },
     "P\n\n\n\n\n\n\n\n\n\n置顶",
     {
-      "c": "#aa96da",
+      "c": "#c6f2bd",
       "t": "#000000\n\n#da969e",
       "fa": [
         0,
         0,
         0,
-        1
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
       ]
     },
-    "[\n\n<i class='fa fa-circle'></i>\nPgUp\n\n\n\n\n\n[]",
-    "]\n\n<i class='fa fa-circle'></i>\nPgdn\n\n\n\n\n\n{}",
+    "[\n\n\n\n\n\n\n\n\n\n{ }",
+    "]\n\n\n\n\n\n\n\n\n\n[ ]",
     {
-      "c": "#5cd1c0",
+      "c": "#b6f7a8",
       "t": "#000000",
+      "f": 3,
       "w": 1.75
     },
     "\\\n\n\n\n\n\n\n\n\n\n向上新开一行"
   ],
   [
     {
-      "c": "#555555",
+      "c": "#3c67ff",
       "t": "#ffffff",
       "w": 1.75
     },
     "CapsLock",
     {
-      "c": "#85edff",
-      "t": "#000000"
+      "c": "#9ef08b",
+      "t": "#000000",
+      "f": 3
     },
     "A\n\n\n\n\n\n\n\n\n\n全选",
     {
-      "c": "#add8e6"
+      "c": "#cbffc2",
+      "f": 3
     },
     "S\n\n\n\n\n\n\n\n\n\n保存",
     {
-      "c": "#ccff66"
+      "c": "#90c2f0",
+      "f": 3
     },
     "D\n\n\n\n\n\n\n\n\n\n!D",
     {
-      "c": "#add8e6"
+      "c": "#cbffc2",
+      "f": 3
     },
     "F\n\n\n\n\n\n\n\n\n\n查找",
     {
-      "c": "#ffadd5"
+      "c": "#808080",
+      "t": "#ffffff",
+      "f": 3
     },
     "G\n\n\n\n\n\n\n\n\n\n#!G",
     {
-      "c": "#add8e6"
+      "c": "#cbffc2",
+      "t": "#000000",
+      "f": 3
     },
     "H\n\n\n\n\n\n\n\n\n\n替换",
     {
-      "c": "#aa96da",
-      "t": "#000000\n\n#da969e"
-    },
-    "J\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n左",
-    "K\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n下",
-    "L\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n右",
-    {
-      "c": "#add8e6",
-      "t": "#000000"
-    },
-    ";\n\n\n\n\n\n\n\n\n\nEsc",
-    {
-      "c": "#85c9c9",
+      "c": "#fce992",
       "t": "#000000\n\n#da969e",
       "f": 3
     },
-    "'\n\n<i class='fa fa-circle'></i>\n\"\"\n\n\n\n\n\n''",
+    "J\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n左",
     {
-      "c": "#5cd1c0",
+      "f": 3
+    },
+    "K\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n下",
+    {
+      "f": 3
+    },
+    "L\n\n<i class='fa fa-circle'></i>\n\n\n\n\n\n\n\n右",
+    {
+      "c": "#c6f2bd",
       "t": "#000000",
+      "f": 3
+    },
+    ";\n\n\n\n\n\n\n\n\n\nEsc",
+    {
+      "t": "#000000\n\n#da969e"
+    },
+    "'\n\n<i class='fa fa-circle'></i>\n\" \"\n\n\n\n\n\n' '",
+    {
+      "c": "#b6f7a8",
+      "t": "#000000",
+      "f": 3,
       "w": 2.5
     },
     "\n\nEnter\n\n\n\n\n\n\n\n向下新开一行"
@@ -219,14 +321,25 @@
     },
     "Shift",
     {
-      "c": "#85edff"
+      "c": "#9ef08b",
+      "f": 3
     },
     "Z\n\n\n\n\n\n\n\n\n\n撤销",
+    {
+      "f": 3
+    },
     "X\n\n\n\n\n\n\n\n\n\n剪切",
+    {
+      "f": 3
+    },
     "C\n\n\n\n\n\n\n\n\n\n复制",
+    {
+      "f": 3
+    },
     "V\n\n\n\n\n\n\n\n\n\n粘贴",
     {
-      "c": "#ffdf80"
+      "c": "#e8a0de",
+      "f": 3
     },
     "B\n\n\n\n\n\n\n\n\n\n删到头",
     {
@@ -276,37 +389,36 @@
     },
     "Alt",
     {
-      "c": "#bbbbbb",
       "f": 3,
       "w": 4.75
     },
     "Space\n\n\n\n\n\n\n\n\n\n回车",
     {
-      "c": "#cccccc",
       "f": 3
     },
     "Alt",
     {
-      "c": "#ffadd5",
       "f": 3
     },
     "PrtSc",
     {
-      "c": "#cccccc",
       "f": 3
     },
     "Ctrl",
     {
       "c": "#ffffd2",
       "t": "#000000\n\n\n\n\n\n\n\n\n\n#0000ff",
+      "f": 3,
       "h": 0.75
     },
     "Pgup\n\n\n\n\n\n\n\n\n\n左键",
     {
+      "f": 3,
       "h": 0.75
     },
     "↑\n\n\n\n\n\n\n\n\n\n上移",
     {
+      "f": 3,
       "w": 1.25,
       "h": 0.75
     },
@@ -316,14 +428,17 @@
     {
       "y": -0.25,
       "x": 12,
+      "f": 3,
       "h": 0.75
     },
     "←\n\n\n\n\n\n\n\n\n\n左移",
     {
+      "f": 3,
       "h": 0.75
     },
     "↓\n\n\n\n\n\n\n\n\n\n下移",
     {
+      "f": 3,
       "w": 1.25,
       "h": 0.75
     },

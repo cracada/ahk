@@ -1,19 +1,19 @@
-;====================================================================
+﻿;====================================================================
 ;                         CR's AHK Script                          
 ;                      CapsLock Enhancement                           
 ;--------------------------------------------------------------------
 ;Summary:                                                             
 ;--------------------------------------------------------------------
-;CapsLock + uiojkl           | Cursor Mover                      
-;CaspLock + qwtpd            | Windows & Tab Controller            
-;CaspLock + erg              | Programs                 
-;CapsLock + zxcvay sfh \ Cr  | Editor                       
-;CapsLock + bnm,.Backspace   | Delte Action 
-;CapsLock + []'              | Key Mapping                      
-;CapsLock + ;                | Esc                      
-;CapsLock + Direction        | Mouse Move                              
-;CapsLock + PgUp/PgDn        | Mouse Click                         
-;CaspLock + 1234567890-=     | Shifter as Shift                   
+;CapsLock + uiojkl             | Cursor Mover                      
+;CaspLock + qwtpd              | Windows & Tab Controller            
+;CaspLock + erg                | Self Defined Programs                 
+;CapsLock + ; Esc F5           | Esc Suspend,Reload 
+;CapsLock + []'                | Key Mapping                      
+;CapsLock + Direction          | Mouse Move                              
+;CapsLock + PgUp/PgDn          | Mouse Click                         
+;CaspLock + 1234567890-=       | Shifter as Shift                   
+;CapsLock + zxcvay sfh bnm,./  | Editor                             
+;         + Enter Backspace \  |                              
 ;--------------------------------------------------------------------
 ;Use it whatever and wherever you like. Hope it help                 
 ;====================================================================
@@ -54,8 +54,16 @@ CapsLock::
     }
 return
 
+
+;Esc:suspend F5:reload 
+CapsLock & Esc::
+Suspend, Permit
+Func_Suspend()
+Return
 CapsLock & F5::Func_reload()
+
 ;--------------------------------------------------------------------
+CapsLock & `::SendInput +``
 CapsLock & 1::SendInput +1
 CapsLock & 2::SendInput +2
 CapsLock & 3::SendInput +3
@@ -67,14 +75,14 @@ CapsLock & 8::SendInput +8
 ;CapsLock & 9::SendInput +9
 CapsLock & 9::
     if GetKeyState("Alt", "P")
-        SendInput () 
+        Func_doubleykh() ;SendInput () 
     else
         SendInput +9
 return
 ;CapsLock & 0::SendInput +0
 CapsLock & 0::
     if GetKeyState("Alt", "P")
-        SendInput () 
+        Func_doubleykh() ;SendInput () 
     else
         SendInput +0
 return
@@ -93,20 +101,18 @@ CapsLock & u::Func_nav("Home")
 CapsLock & i::Func_nav("Up")	
 CapsLock & o::Func_nav("End")
 CapsLock & p::Func_winPin() 
-;CapsLock & [::SendInput ( 
-CapsLock & [::
-    if GetKeyState("Alt", "P")
-        SendInput {PgUp}
-    else
-        SendInput [] 
-return
-;CapsLock & ]::SendInput ) 
-CapsLock & ]::
-    if GetKeyState("Alt", "P")
-        SendInput {PgDn}
-    else
-        SendInput {{}{}}
-return
+CapsLock & [::Func_doublehkh()
+;    if GetKeyState("Alt", "P")
+;        SendInput {PgUp}
+;    else
+;        Func_doublezkh()
+;return
+CapsLock & ]::Func_doublezkh()
+;    if GetKeyState("Alt", "P")
+;        SendInput {PgDn}
+;    else
+;        SendInput {{}{}}
+;return
 
 ;--------------------------------------------------------------------
 CapsLock & a::SendInput ^a 
@@ -127,12 +133,12 @@ CapsLock & `;::
         SendInput {=}  
 return
 */
-;CapsLock & '::SendInput {-} ;'' ""
+
 CapsLock & '::
     if GetKeyState("Alt", "P")
-        SendInput "" 
+        Func_doublesyh() ;SendInput "" 
     else
-        SendInput ''  
+        Func_doubledyh() ;SendInput ''  
 return
 
 ;--------------------------------------------------------------------
@@ -219,14 +225,112 @@ Func_ditto(sn) {
     if (sn != "")
         Sleep, 100
         SendInput !%sn% 
+return
+}
+; 选择的内容用括号括起来
+Func_doubleChar(char1,char2:=""){
+    if(char2=="")
+    {
+        char2:=char1
+    }
+    charLen:=StrLen(char2)
+    selText:=getSelText()
+    ClipboardOld:=ClipboardAll
+    if(selText)
+    {
+        Clipboard:=char1 . selText . char2
+        SendInput, +{insert}
+    }
+    else
+    {
+        Clipboard:=char1 . char2
+        SendInput, +{insert}{left %charLen%}
+    }
+    Sleep, 100
+    Clipboard:=ClipboardOld
+    Return
 }
 
+;尖括号/圆括号、中括号、花括号、单引号、双引号
+Func_doublejkh(){
+    Func_doubleChar("<",">")
+    return
+}
+Func_doubleykh(){
+    Func_doubleChar("(",")")
+    return
+}
+Func_doublezkh(){
+    Func_doubleChar("[","]")
+    return
+}
+Func_doublehkh(){
+    Func_doubleChar("{","}")
+    return
+}
+Func_doubledyh(){
+    Func_doubleChar("'","'")
+    return
+}
+Func_doublesyh(){
+    Func_doubleChar("""")
+    return
+}
+
+getSelText()
+{
+    ClipboardOld:=ClipboardAll
+    Clipboard:=""
+    SendInput, ^{insert}
+    ClipWait, 0.1
+    if(!ErrorLevel)
+    {
+        selText:=Clipboard
+        Clipboard:=ClipboardOld
+        StringRight, lastChar, selText, 1
+        if(Asc(lastChar)!=10)
+        {
+            return selText
+        }
+    }
+    Clipboard:=ClipboardOld
+    return
+}
+
+
+Func_Suspend(){
+    if (A_IsSuspended)
+    {
+        Suspend, Off
+        SetCapsLockState, AlwaysOff
+        Menu, Tray, Icon, kk.ico, , 1
+        ToolTip, AHK 已恢复
+    }
+    else
+    {
+        SetCapsLockState, Off
+        Menu, Tray, Icon, k0.ico, , 1
+        Suspend, On
+        ToolTip, AHK 已暂停
+    }
+    SetTimer, RemoveToolTip, 1500  ; 2秒后移除提示
+return
+}
+
+
+RemoveToolTip:
+    ToolTip
+return
+
+;Reload
 Func_reload(){
     MsgBox, , , reload, 0.5
     Reload
     return
 }
 
+;Do nothing
 Func_nothing(){
     return
 }
+
