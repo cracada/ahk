@@ -1,4 +1,4 @@
 # ahk
 AHK Scripts
 
-![Cr's CapsLock AHK Scripts](kb.png)
+![Cr's CapsLock AHK Scripts](keyboard/kb.png)

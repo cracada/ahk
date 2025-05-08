@@ -54,7 +54,7 @@ CapsLock::
     }
 return
 
-
+Alt::return
 ;Esc:suspend F5:reload 
 CapsLock & Esc::
 Suspend, Permit
