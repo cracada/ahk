@@ -5,24 +5,25 @@
 ;Summary:                                                             
 ;--------------------------------------------------------------------
 ;CapsLock + uiojkl             | Cursor Mover                      
-;CaspLock + qwtpd              | Windows & Tab Controller            
-;CaspLock + erg                | Self Defined Programs                 
-;CapsLock + ; Esc F5           | Esc Suspend,Reload 
+;CaspLock + qwp                | Windows & Tab Controller            
+;CaspLock + ertsdfgh           | Self Defined Programs                 
+;CapsLock + zxcvay             | Editor                             
+;         + bnm,./             | Editor(del)                       
+;         + Enter Backspace \  | Editor (line)                     
+;CapsLock + Esc ; F5           | Suspend,Esc,Reload 
 ;CapsLock + []'                | Key Mapping                      
 ;CapsLock + Direction          | Mouse Move                              
 ;CapsLock + PgUp/PgDn          | Mouse Click                         
-;CaspLock + 1234567890-=       | Shifter as Shift                   
-;CapsLock + zxcvay sfh bnm,./  | Editor                             
-;         + Enter Backspace \  |                              
+;CaspLock + 1234567890-=       | Shifter as Shift    
 ;--------------------------------------------------------------------
-;Use it whatever and wherever you like. Hope it help                 
+;Use it whatever and wherever U like. Hope it help                 
 ;====================================================================
 
 
 #SingleInstance force
 SetWorkingDir %A_ScriptDir%
 
-; If the script is not elevated, relaunch as administrator and kill current instance:
+;launch as administrator 
 full_command_line := DllCall("GetCommandLine", "str")
 if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
 {
@@ -36,7 +37,7 @@ if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
     ExitApp
 }
 
-;icon set
+;icon
 if FileExist("kk.ico") {
     Menu, Tray, Icon, kk.ico
 } else {
@@ -46,6 +47,7 @@ if FileExist("kk.ico") {
 #NoEnv
 Process Priority,,High
 SetStoreCapslockMode, Off
+
 CapsLock::
     KeyWait, CapsLock 
     if (A_TimeSinceThisHotkey < 300) { 
@@ -72,17 +74,15 @@ CapsLock & 5::SendInput +5
 CapsLock & 6::SendInput +6
 CapsLock & 7::SendInput +7
 CapsLock & 8::SendInput +8
-;CapsLock & 9::SendInput +9
 CapsLock & 9::
     if GetKeyState("Alt", "P")
-        Func_doubleykh() ;SendInput () 
+        Func_doubleykh()  
     else
         SendInput +9
 return
-;CapsLock & 0::SendInput +0
 CapsLock & 0::
     if GetKeyState("Alt", "P")
-        Func_doubleykh() ;SendInput () 
+        Func_doubleykh()  
     else
         SendInput +0
 return
@@ -125,20 +125,12 @@ CapsLock & j::Func_nav("Left")
 CapsLock & k::Func_nav("Down")
 CapsLock & l::Func_nav("Right")
 CapsLock & `;::SendInput {Esc}
-/* 
-CapsLock & `;::
-    if GetKeyState("Alt", "P")
-        SendInput {-} 
-    else
-        SendInput {=}  
-return
-*/
 
 CapsLock & '::
     if GetKeyState("Alt", "P")
-        Func_doublesyh() ;SendInput "" 
+        Func_doubledyh() ;SendInput "" 
     else
-        Func_doubledyh() ;SendInput ''  
+        Func_doublesyh() ;SendInput ''  
 return
 
 ;--------------------------------------------------------------------
@@ -156,15 +148,13 @@ CapsLock & /::SendInput +{End}{BS}
 CapsLock & BackSpace::SendInput {End}+{Home}{BS}  
 CapsLock & \::SendInput {Home}{Enter}{Up}  
 CapsLock & Enter::SendInput {End}{Enter}  
-
-;CapsLock & RShift::SendInput {Esc}
 CapsLock & Space::SendInput {Enter} 
 
 ;--------------------------------------------------------------------
-; 鼠标单击
+; mouse click
 CapsLock & PgUp:: Click,Left                                                     
 CapsLock & PgDn:: Click,Right 
-; 光标移动
+; mouse curosr move
 CapsLock & Left::
 MouseMove, -15, 0, 0, R                                               
 return  
@@ -179,23 +169,11 @@ MouseMove, 15, 0, 0, R
 return 
 
 ;--------------------------------------------------------------------
-;PrtSC唤起FSCapture截图
-PrintScreen::SendInput #^!p
-
-;Ctrl+B only in Chrome
-#IfWinActive ahk_exe chrome.exe
-Ctrl & b::
-    KeyWait, b
-    Func_ditto(1)
-return
-#IfWinActive
-
-;--------------------------------------------------------------------
-;cursor mover
+;cursor mover, with Ctrl & Alt
 Func_nav(act){
 if GetKeyState("control", "P")
 {                        
-    if GetKeyState("Alt", "P") ;almost impossible ctrl+shift+
+    if GetKeyState("Alt", "P") ;almost impossible 4 ctrl+shift+char
         Send, ^+{%act%}        
     else                      
         Send, ^{%act%}		
@@ -227,7 +205,7 @@ Func_ditto(sn) {
         SendInput !%sn% 
 return
 }
-; 选择的内容用括号括起来
+; enclose function
 Func_doubleChar(char1,char2:=""){
     if(char2=="")
     {
@@ -251,7 +229,7 @@ Func_doubleChar(char1,char2:=""){
     Return
 }
 
-;尖括号/圆括号、中括号、花括号、单引号、双引号
+; enclosed in <> () [] {} '' ""
 Func_doublejkh(){
     Func_doubleChar("<",">")
     return
@@ -277,6 +255,7 @@ Func_doublesyh(){
     return
 }
 
+;selected text
 getSelText()
 {
     ClipboardOld:=ClipboardAll
@@ -297,7 +276,7 @@ getSelText()
     return
 }
 
-
+;Suspend
 Func_Suspend(){
     if (A_IsSuspended)
     {
@@ -316,15 +295,13 @@ Func_Suspend(){
     SetTimer, RemoveToolTip, 1500  ; 2秒后移除提示
 return
 }
-
-
 RemoveToolTip:
     ToolTip
 return
 
 ;Reload
 Func_reload(){
-    MsgBox, , , reload, 0.5
+    MsgBox, , , Reload, 0.5
     Reload
     return
 }
@@ -334,3 +311,19 @@ Func_nothing(){
     return
 }
 
+;--------------------------------------------------------------------
+;PrtSC唤起FSCapture
+PrintScreen::SendInput #^!p
+
+;Win+B only in Chrome 
+#IfWinActive ahk_exe chrome.exe
+LWin & b::
+    KeyWait, b
+    SendInput ^v
+    Sleep, 100 
+    SendInput !``
+    Sleep 100
+    SendInput !1
+    Sleep 100    
+return
+#IfWinActive
