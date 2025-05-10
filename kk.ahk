@@ -121,7 +121,7 @@ CapsLock & a::Send ^a
 CapsLock & s::Send ^s 
 CapsLock & d::Send !d
 CapsLock & f::Send ^f
-CapsLock & g::Send #^g
+CapsLock & g::Send ^!g
 CapsLock & h::Send ^h
 CapsLock & j::Func_nav("Left")
 CapsLock & k::Func_nav("Down")
@@ -319,7 +319,7 @@ Func_nothing(){
 PrintScreen::Send #^!p
 
 ;Win+B only in Chrome 
-#IfWinActive ahk_exe chrome.exe
+;#IfWinActive ahk_exe chrome.exe
 LWin & b::
     KeyWait, b
     Send ^v
@@ -329,4 +329,4 @@ LWin & b::
     Send !1
     Sleep 100    
 return
-#IfWinActive
+;#IfWinActive
